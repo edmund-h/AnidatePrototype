@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gjS-BE-tCd">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AniDate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQ3-2Q-JNw" userLabel="Card Area">
+                                <rect key="frame" x="0.0" y="64" width="320" height="426"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.3411764706" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Xc-xr-zzX" userLabel="Indicator Container">
+                                <rect key="frame" x="131.5" y="255.5" width="57" height="57"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fRS-JD-AZ6" userLabel="Activity Indicator">
+                                        <rect key="frame" x="9.5" y="9.5" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="fRS-JD-AZ6" firstAttribute="centerX" secondItem="9Xc-xr-zzX" secondAttribute="centerX" id="A2f-xH-zje"/>
+                                    <constraint firstItem="fRS-JD-AZ6" firstAttribute="centerY" secondItem="9Xc-xr-zzX" secondAttribute="centerY" id="Rdt-ux-7Pz"/>
+                                    <constraint firstAttribute="width" secondItem="9Xc-xr-zzX" secondAttribute="height" multiplier="1:1" id="abQ-RQ-oBd"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNa-5b-EQZ" userLabel="Like">
+                                <rect key="frame" x="0.0" y="490" width="96" height="78"/>
+                                <state key="normal" title="❤️"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5GH-tk-K3z" userLabel="Notice Me Senpai">
+                                <rect key="frame" x="112" y="490" width="96" height="78"/>
+                                <state key="normal" title="💖❗️"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfg-mO-Qfe" userLabel="Pass">
+                                <rect key="frame" x="224" y="490" width="96" height="78"/>
+                                <state key="normal" title="❌"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="iQ3-2Q-JNw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2ZO-EN-uRS"/>
+                            <constraint firstItem="5GH-tk-K3z" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2rD-PM-YwJ"/>
+                            <constraint firstItem="iQ3-2Q-JNw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3dH-X4-Wpx"/>
+                            <constraint firstItem="cNa-5b-EQZ" firstAttribute="top" secondItem="iQ3-2Q-JNw" secondAttribute="bottom" id="70v-nx-1eM"/>
+                            <constraint firstItem="5GH-tk-K3z" firstAttribute="height" secondItem="cNa-5b-EQZ" secondAttribute="height" id="AX9-re-AaE"/>
+                            <constraint firstItem="5GH-tk-K3z" firstAttribute="width" secondItem="cNa-5b-EQZ" secondAttribute="width" id="Gcr-Uu-MLM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bfg-mO-Qfe" secondAttribute="trailing" id="GiS-TY-Nye"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cNa-5b-EQZ" secondAttribute="bottom" id="JKI-lD-gwW"/>
+                            <constraint firstItem="bfg-mO-Qfe" firstAttribute="width" secondItem="cNa-5b-EQZ" secondAttribute="width" id="JeE-bQ-Ye3"/>
+                            <constraint firstItem="iQ3-2Q-JNw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="MzC-BE-xXk"/>
+                            <constraint firstItem="cNa-5b-EQZ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="Oy6-67-9St"/>
+                            <constraint firstItem="9Xc-xr-zzX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aXh-jc-LgY"/>
+                            <constraint firstItem="5GH-tk-K3z" firstAttribute="centerY" secondItem="cNa-5b-EQZ" secondAttribute="centerY" id="aZQ-pI-xtD"/>
+                            <constraint firstItem="9Xc-xr-zzX" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="gRv-jd-6ie"/>
+                            <constraint firstItem="bfg-mO-Qfe" firstAttribute="centerY" secondItem="cNa-5b-EQZ" secondAttribute="centerY" id="o1b-eY-g4h"/>
+                            <constraint firstItem="cNa-5b-EQZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oFz-id-Ct6"/>
+                            <constraint firstItem="9Xc-xr-zzX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uuD-oN-3oI"/>
+                            <constraint firstItem="iQ3-2Q-JNw" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.75" id="wCF-Aa-ncX"/>
+                            <constraint firstItem="bfg-mO-Qfe" firstAttribute="height" secondItem="cNa-5b-EQZ" secondAttribute="height" id="zQ6-g2-aBX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bd3-Ta-DBr"/>
+                    <connections>
+                        <outlet property="cardStack" destination="iQ3-2Q-JNw" id="cSt-sp-lMD"/>
+                        <outlet property="likeButton" destination="cNa-5b-EQZ" id="QMX-n6-FwM"/>
+                        <outlet property="loadArea" destination="9Xc-xr-zzX" id="ViJ-YB-6lY"/>
+                        <outlet property="loadIndicator" destination="fRS-JD-AZ6" id="yoh-FB-Umt"/>
+                        <outlet property="noticeMeButton" destination="5GH-tk-K3z" id="pFJ-eQ-93j"/>
+                        <outlet property="passButton" destination="bfg-mO-Qfe" id="sfJ-lZ-G4B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="658" y="-600"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UCh-v6-xTg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gjS-BE-tCd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X5x-jD-rmj">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="g6R-eN-goc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Li5-gp-7WG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-101.25" y="-600"/>
+        </scene>
+    </scenes>
+</document>
