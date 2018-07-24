@@ -10,9 +10,10 @@ import UIKit
 
 extension UIView {
     
-    func constrainToSelf(_ view: UIView) {
+    func constrainToSelf(_ view: UIView, atBottom: Bool = false) {
         //I refactor these commonly used constraints out into an extension to make programmatic setup as dry as possible
-        self.addSubview(view)
+        if atBottom {self.insertSubview(view, at: 0)}
+        else {self.addSubview(view)}
         view.translatesAutoresizingMaskIntoConstraints = false
         view.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         view.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true

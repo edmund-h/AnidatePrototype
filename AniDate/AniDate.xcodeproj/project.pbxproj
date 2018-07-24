@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F2619BC51150A5F9BA17B24 /* Pods_AniDate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CA862D8DBC8377DCDEC0AC /* Pods_AniDate.framework */; };
+		885DD47D21078F1F00A29BDB /* SwipeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885DD47C21078F1F00A29BDB /* SwipeResult.swift */; };
 		8873EC3A20F8C273004B59B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8873EC3920F8C273004B59B2 /* AppDelegate.swift */; };
 		8873EC3C20F8C273004B59B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8873EC3B20F8C273004B59B2 /* ViewController.swift */; };
 		8873EC3F20F8C273004B59B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8873EC3D20F8C273004B59B2 /* Main.storyboard */; };
@@ -22,11 +23,13 @@
 		8873EC5F20F8D7C8004B59B2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8873EC5E20F8D7C8004B59B2 /* UIView+Extensions.swift */; };
 		8873EC6220F8D96A004B59B2 /* Swipeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8873EC6120F8D96A004B59B2 /* Swipeable.swift */; };
 		8873EC6420F8DCB2004B59B2 /* ProfileGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8873EC6320F8DCB2004B59B2 /* ProfileGenerator.swift */; };
+		8873EC6720F91741004B59B2 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8873EC6620F91741004B59B2 /* Notifications.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3FB4307502D09365F9B459D5 /* Pods-AniDate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AniDate.release.xcconfig"; path = "Pods/Target Support Files/Pods-AniDate/Pods-AniDate.release.xcconfig"; sourceTree = "<group>"; };
 		57F7A9ED5D8FE61A220B430C /* Pods-AniDate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AniDate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AniDate/Pods-AniDate.debug.xcconfig"; sourceTree = "<group>"; };
+		885DD47C21078F1F00A29BDB /* SwipeResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeResult.swift; sourceTree = "<group>"; };
 		8873EC3620F8C273004B59B2 /* AniDate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AniDate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8873EC3920F8C273004B59B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8873EC3B20F8C273004B59B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +46,7 @@
 		8873EC5E20F8D7C8004B59B2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		8873EC6120F8D96A004B59B2 /* Swipeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swipeable.swift; sourceTree = "<group>"; };
 		8873EC6320F8DCB2004B59B2 /* ProfileGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileGenerator.swift; sourceTree = "<group>"; };
+		8873EC6620F91741004B59B2 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		C6CA862D8DBC8377DCDEC0AC /* Pods_AniDate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AniDate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -138,6 +142,7 @@
 			children = (
 				8873EC3920F8C273004B59B2 /* AppDelegate.swift */,
 				8873EC6320F8DCB2004B59B2 /* ProfileGenerator.swift */,
+				8873EC6620F91741004B59B2 /* Notifications.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 				8873EC4020F8C277004B59B2 /* Assets.xcassets */,
 				8873EC5420F8C546004B59B2 /* TypeAlias.swift */,
 				8873EC5620F8C636004B59B2 /* Constants.swift */,
+				885DD47C21078F1F00A29BDB /* SwipeResult.swift */,
 				8873EC6020F8D94B004B59B2 /* Protocols */,
 				8873EC5D20F8D76A004B59B2 /* Extensions */,
 			);
@@ -320,9 +326,11 @@
 			files = (
 				8873EC5A20F8C6CA004B59B2 /* ProfileCard.swift in Sources */,
 				8873EC5320F8C423004B59B2 /* Gender.swift in Sources */,
+				8873EC6720F91741004B59B2 /* Notifications.swift in Sources */,
 				8873EC3C20F8C273004B59B2 /* ViewController.swift in Sources */,
 				8873EC5120F8C3B5004B59B2 /* Profile.swift in Sources */,
 				8873EC6220F8D96A004B59B2 /* Swipeable.swift in Sources */,
+				885DD47D21078F1F00A29BDB /* SwipeResult.swift in Sources */,
 				8873EC3A20F8C273004B59B2 /* AppDelegate.swift in Sources */,
 				8873EC5520F8C546004B59B2 /* TypeAlias.swift in Sources */,
 				8873EC6420F8DCB2004B59B2 /* ProfileGenerator.swift in Sources */,

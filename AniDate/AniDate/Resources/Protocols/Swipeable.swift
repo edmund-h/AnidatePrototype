@@ -12,18 +12,43 @@ import UIKit
 
 protocol Swipeable {}
 
-extension Swipeable where Self: UIPanGestureRecognizer {
+extension Swipeable where Self: UIView {
     
-    func swipeView(_ view: UIView) {
+    func swipeView(_ pGR: UIPanGestureRecognizer, onSwipe completion: @escaping (SwipeResult)->()) {
         
-        switch state {
+        switch pGR.state {
         case .changed:
-            let translation = self.translation(in: view.superview)
-            view.transform = CGAffineTransform(translationX: translation.x, y: translation.y)
+            let translation = pGR.translation(in: self.superview)
+            self.transform = CGAffineTransform(translationX: translation.x, y: translation.y)
         case .ended:
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 1.0, options: [], animations: {
-                view.transform = .identity
-            }, completion: nil)
+            let center = self.frame.origin
+            if center.x <= (-1/2) * self.frame.width {
+                UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+                    self.center.x -= self.frame.width
+                    self.alpha = 0
+                }, completion: { _ in
+                    completion(.like)
+                })
+            } else if center.x >= (1/2) * self.frame.width {
+                UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+                self.center.x += self.frame.width
+                self.alpha = 0
+                }, completion: { _ in
+                completion(.pass)
+                })
+                
+            } else if center.y <= (-1/2) * self.frame.height {
+                UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+                self.center.y -= self.frame.height
+                self.alpha = 0
+                }, completion: { _ in
+                    completion(.noticeMe)
+                })
+            } else {
+                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 1.0, options: [], animations: {
+                    self.transform = .identity
+                }, completion: nil)
+            }
         default:
             break
         }
@@ -31,5 +56,3 @@ extension Swipeable where Self: UIPanGestureRecognizer {
     }
     
 }
-
-extension UIPanGestureRecognizer: Swipeable {}

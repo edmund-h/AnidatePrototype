@@ -21,6 +21,7 @@ class ProfileCard: UIView {
             guard let profile = profile else {return}
             nameAgeLabel.text = profile.name + ", " + String(profile.age)
             bio.text = profile.bio
+            bio.isEditable = false
             animesLabel.text = profile.anime.joined(separator: ", ")
             imageView.image = #imageLiteral(resourceName: "konata")
         }
@@ -43,4 +44,8 @@ class ProfileCard: UIView {
         self.constrainToSelf(contentArea)
     }
 
+}
+
+extension ProfileCard: Swipeable {
+    
 }
